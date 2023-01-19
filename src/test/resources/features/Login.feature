@@ -1,17 +1,23 @@
 Feature: To Test Login Functionality
 
-# here write all scenarios
-  Scenario: Verify user can login into application
+
+  Background:
+
     Given user open website
     And verify user is on login page
+
+# here write all scenarios
+
+  @Smoke @Chirag
+  Scenario: Verify user can login into application
+
     When user enter the valid credentials
     Then verify home page is displayed
-    Given user open website
 
+  @Regression @Paulina
   Scenario: Verify user cannot login with invalid credentials
-    Given user open website
-    And verify user is on login page
-    When user enter the valid credentials
+
+    When user enter the invalid credentials
     Then verify invalid login error message is displayed
-    Given user open website
-    And user close website
+
+    #And user close website
