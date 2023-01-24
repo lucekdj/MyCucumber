@@ -6,12 +6,12 @@ import io.cucumber.java.Before;
 public class Hooks {
 
     @Before
-    public void setUp(){
-        System.out.println("Before Each Scenario");
+    public void setUp() {
+        System.out.println("** Before Each Scenario from hooks");
     }
 
     @After
     public void cleanUp(){
-        System.out.println("After Each Scenario");
+        System.out.println("## After Each Scenario from hooks");
     }
 }

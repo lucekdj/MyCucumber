@@ -7,9 +7,11 @@ import org.junit.runner.RunWith;
 @RunWith(Cucumber.class)
 @CucumberOptions(
 
-features = "src//test//resources//features//Login.feature",
-glue = "com.automation.steps",
-tags = "@Smoke or @Paulina"
+        features = "src//test//resources//features//Login.feature",//features = "src//test//resources//features//DepositWithdraw.feature",
+        glue = "com.automation.steps",
+        tags = "@wip",     //"@Smoke or @Paulina",
+        plugin = {"html:html-report/report.html","json:target/cucumber.json"},
+        dryRun = true
 
 )
 
